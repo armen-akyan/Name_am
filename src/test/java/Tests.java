@@ -20,7 +20,6 @@ public class Tests {
     @Test
     public void loginTest() {
         JsonObject jsonObject = ApiHelper.login();
-        DriverSetUp.getDriver().navigate().refresh();
         Assert.assertEquals(jsonObject.get("fullName").toString(), "\"Armen Armenakyan\"", "Login failed");
     }
 
